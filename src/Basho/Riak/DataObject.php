@@ -956,7 +956,7 @@ class DataObject
      */
     public function getSiblingCount()
     {
-        return count($this->siblings);
+        return is_array($this->siblings) || $this->siblings instanceof \Countable  ? count($this->siblings) : 0;
     }
 
     /**
