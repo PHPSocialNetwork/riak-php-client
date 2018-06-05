@@ -12,6 +12,8 @@ use Basho\Riak\CommandInterface;
  */
 class Delete extends Command implements CommandInterface
 {
+    protected $method = 'DELETE';
+    
     /**
      * Stores the table name
      *
